@@ -67,11 +67,12 @@ line also shows an exchange rate and a ~1% cross-border fee, and `card_amount ×
 folio_foreign_total` — use that to match. Within a folio, **nights = the count of `Room Charge`
 lines**, the **stay window = first→last room-charge date**, and **nightly rate = charge ÷ nights**.
 Some deposits are intermediate top-ups with no emailed folio — those are the "missing" receipts.
-Match by the **settlement amount, not the email date**: when you ask the hotel for a missing folio they
-often re-issue one **comprehensive folio covering the whole reservation** (several deposits at once).
-That's legitimate — file it under the period whose deposit it settles, label it by its **actual** date
-span, and **never edit, split, or delete pages from an official folio**; a doctored-looking receipt fails
-the audit. One folio overlapping a later period's folio is fine; just don't store the same file twice.
+When you request a missing folio the hotel often re-issues one **comprehensive folio for the whole
+reservation** (settling several deposits at once) rather than just the gap — match it to its charge(s) by
+settlement, not by the email's date. That's legitimate: keep it whole, file it under the earliest period
+it settles, label it by its **actual** date span, and **never edit, split, or delete pages from an
+official folio** — a doctored-looking receipt fails the audit. Don't duplicate it into the other periods
+it covers; reference it from them.
 
 ## Procedure
 
@@ -105,13 +106,14 @@ the audit. One folio overlapping a later period's folio is fine; just don't stor
    arrival/departure, the night count, and the settlement from every folio, then **match each folio
    to its charge** by the amount.
 
-5. **Handle gaps.** More charges than folios means intermediate deposits the hotel never emailed — a
-   date window (between two folios, or before the first folio's billing starts) with no folio. For
-   each, still build the folder with its Citibank doc, mark the receipt MISSING, and leave nights
-   blank. Record the exact start/end of each gap window for the front-desk request.
+5. **Handle gaps.** Fewer folios than charges has two causes — read the folios' settlement lines before
+   calling it a gap. A **comprehensive folio** may settle several charges (not a gap: keep it in its
+   earliest period, reference it from the others). A **true gap** is a deposit with no folio at all —
+   build the folder with its Citibank doc, mark the receipt MISSING, leave nights blank, and record the
+   window's exact start/end for the front-desk request.
 
-6. **Assemble the package.** One folder per charge named `<LastName> <START> to <END>` in **sortable
-   `YYYY-MM-DD`** dates so folders order chronologically (gap periods take the window between adjacent
+6. **Assemble the package.** One folder per charge named `<LastName> <START> to <END>` in sortable
+   `YYYY-MM-DD` dates (gap periods take the window between adjacent
    folios). Name each file for **what it actually contains** — a folio's true date span, the statement it
    was cropped from — not an assumed window; if a comprehensive folio covers several periods, say so in
    its name (e.g. `Folio 2026-03-29 to 2026-04-23 (full reservation).pdf`). Build the Excel with
